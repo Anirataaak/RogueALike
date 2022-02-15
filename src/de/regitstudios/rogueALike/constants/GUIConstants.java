@@ -37,5 +37,6 @@ public interface GUIConstants {
     
     String TEST = "TEST";
     String TEST1 = "TEST1";
+    String TEST2 = "TEST2";
     String TEST3 = "TEST3";
 }
