@@ -36,4 +36,5 @@ public interface GUIConstants {
     String DIR_RIGHT = "RIGHT";
     
     String TEST = "TEST";
+    String TEST1 = "TEST1";
 }
