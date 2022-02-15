@@ -5,28 +5,27 @@
  *
  *  All rights reserved
  */
-package de.regitstudios.rogueALike.handler;
+package de.regitstudios.rogueALike.gui.listener;
 
-import de.regitstudios.rogueALike.gui.GamePanel;
+import de.regitstudios.rogueALike.gui.interfaces.GameInterface;
 
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
 import static de.regitstudios.rogueALike.constants.GameConstants.INVENTORY_STATE;
 import static de.regitstudios.rogueALike.constants.GameConstants.PLAY_STATE;
-import static de.regitstudios.rogueALike.constants.Sounds.*;
-import static de.regitstudios.rogueALike.gui.Game.DEBUG;
-import static de.regitstudios.rogueALike.handler.SoundHandler.playSoundOnce;
+import static de.regitstudios.rogueALike.objects.sounds.Sounds.*;
+import static de.regitstudios.rogueALike.game.RogueALikeGame.DEBUG;
+import static de.regitstudios.rogueALike.utils.SoundUtil.playSoundOnce;
 
 /**
  * @author <a href="mailto:fabian.stetter@regitstudios.de">Fabian Stetter</a>
  */
-public class KeyHandler implements KeyListener {
+public class InGameKeyListener implements java.awt.event.KeyListener {
 
     public boolean upPressed, downPressed, leftPressed, rightPressed, actionPressed;
-    private GamePanel gamePanel;
+    private GameInterface gamePanel;
 
-    public KeyHandler(GamePanel gamePanel) {
+    public InGameKeyListener(GameInterface gamePanel) {
         this.gamePanel = gamePanel;
     }
 
@@ -45,45 +44,45 @@ public class KeyHandler implements KeyListener {
             case KeyEvent.VK_D, KeyEvent.VK_RIGHT -> rightPressed = true;
             case KeyEvent.VK_E -> actionPressed = true;
             case KeyEvent.VK_P -> {
-                if (gamePanel.gameState == PLAY_STATE) {
-                    gamePanel.gameState = INVENTORY_STATE;
-                } else if (gamePanel.gameState == INVENTORY_STATE) {
-                    gamePanel.gameState = PLAY_STATE;
+                if (gamePanel.getCurrentState() == PLAY_STATE) {
+                    gamePanel.setCurrentState(INVENTORY_STATE);
+                } else if (gamePanel.getCurrentState() == INVENTORY_STATE) {
+                    gamePanel.setCurrentState(PLAY_STATE);
                 }
             }
             case KeyEvent.VK_1 -> {
                 if (DEBUG) {
-                    gamePanel.player.setGemCount(gamePanel.player.getGemCount() + 1);
+                    gamePanel.getCurrentPlayer().setGemCount(gamePanel.getCurrentPlayer().getGemCount() + 1);
                     playSoundOnce(SOUND_GEM_PICKUP);
                 }
             }
             case KeyEvent.VK_2 -> {
                 if (DEBUG) {
-                    gamePanel.player.setBombCount(gamePanel.player.getBombCount() + 1);
+                    gamePanel.getCurrentPlayer().setBombCount(gamePanel.getCurrentPlayer().getBombCount() + 1);
                     playSoundOnce(SOUND_PICKUP);
                 }
             }
             case KeyEvent.VK_3 -> {
                 if (DEBUG) {
-                    gamePanel.player.setArrowCount(gamePanel.player.getArrowCount() + 1);
+                    gamePanel.getCurrentPlayer().setArrowCount(gamePanel.getCurrentPlayer().getArrowCount() + 1);
                     playSoundOnce(SOUND_PICKUP);
                 }
             }
             case KeyEvent.VK_4 -> {
                 if (DEBUG) {
-                    gamePanel.player.setKeyCount(gamePanel.player.getKeyCount() + 1);
+                    gamePanel.getCurrentPlayer().setKeyCount(gamePanel.getCurrentPlayer().getKeyCount() + 1);
                     playSoundOnce(SOUND_KEY_PICKUP);
                 }
             }
             case KeyEvent.VK_5 -> {
                 if (DEBUG) {
-                    gamePanel.player.setMaxHealth(gamePanel.player.getMaxHealth() + 2);
+                    gamePanel.getCurrentPlayer().setMaxHealth(gamePanel.getCurrentPlayer().getMaxHealth() + 2);
                     playSoundOnce(SOUND_CHEST_OPEN);
                 }
             }
             case KeyEvent.VK_6 -> {
                 if (DEBUG) {
-                    gamePanel.player.setActHealth(gamePanel.player.getActHealth() + 1);
+                    gamePanel.getCurrentPlayer().setActHealth(gamePanel.getCurrentPlayer().getActHealth() + 1);
                     playSoundOnce(SOUND_PICKUP);
                 }
             }

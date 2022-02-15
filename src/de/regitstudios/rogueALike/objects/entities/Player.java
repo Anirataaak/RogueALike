@@ -8,10 +8,11 @@
 package de.regitstudios.rogueALike.objects.entities;
 
 import de.regitstudios.rogueALike.constants.GUIConstants;
-import de.regitstudios.rogueALike.gui.Game;
-import de.regitstudios.rogueALike.gui.GamePanel;
-import de.regitstudios.rogueALike.handler.KeyHandler;
-import de.regitstudios.rogueALike.objects.Sprite;
+import de.regitstudios.rogueALike.game.RogueALikeGame;
+import de.regitstudios.rogueALike.gui.interfaces.GameInterface;
+import de.regitstudios.rogueALike.gui.interfaces.InGameInterface;
+import de.regitstudios.rogueALike.gui.listener.InGameKeyListener;
+import de.regitstudios.rogueALike.objects.sprites.Sprite;
 import de.regitstudios.rogueALike.objects.item.Item;
 
 import java.awt.*;
@@ -21,9 +22,9 @@ import java.awt.*;
  */
 public class Player extends Entity {
 
-    private final KeyHandler keyListener;
+    private final InGameKeyListener inGameKeyListener;
     public final int screenX, screenY;
-    private GamePanel gamePanel;
+    private GameInterface gamePanel;
     private int keyCount = 0;
     private int gemCount = 0;
     private int bombCount = 0;
@@ -32,9 +33,9 @@ public class Player extends Entity {
     private int actHealth = 11;
     private boolean isLowOnHealth = false;
 
-    public Player(KeyHandler keyListener, GamePanel gamePanel){
+    public Player(InGameKeyListener inGameKeyListener, GameInterface gamePanel){
         super(gamePanel);
-        this.keyListener = keyListener;
+        this.inGameKeyListener = inGameKeyListener;
         screenX = SCREEN_WIDTH / 2 - (TILE_SIZE / 2);
         screenY = SCREEN_HEIGHT / 2 - (TILE_SIZE / 2);
         getSolidArea().x = 8;
@@ -73,27 +74,27 @@ public class Player extends Entity {
 
     public void update(){
 
-        if(keyListener.upPressed || keyListener.downPressed || keyListener.leftPressed || keyListener.rightPressed){
+        if(inGameKeyListener.upPressed || inGameKeyListener.downPressed || inGameKeyListener.leftPressed || inGameKeyListener.rightPressed){
 
-            if(keyListener.upPressed) {
+            if(inGameKeyListener.upPressed) {
                 setDirection(DIR_UP);
             }
-            if(keyListener.downPressed) {
+            if(inGameKeyListener.downPressed) {
                 setDirection(DIR_DOWN);
             }
-            if(keyListener.leftPressed) {
+            if(inGameKeyListener.leftPressed) {
                 setDirection(DIR_LEFT);
             }
-            if(keyListener.rightPressed) {
+            if(inGameKeyListener.rightPressed) {
                 setDirection(DIR_RIGHT);
             }
 
             // Check Tile Collision
             setCollisionOn(false);
-            gamePanel.collisionHandler.checkTileForCollision(this);
+            gamePanel.getCollisionHandler().checkTileForCollision(this);
 
             // Check Item Collision
-            Item collisionItem = gamePanel.collisionHandler.checkObjectCollision(this, true);
+            Item collisionItem = gamePanel.getCollisionHandler().checkObjectCollision(this, true);
             pickUpObject(collisionItem, this);
 
             // If Collision is false, player can move
@@ -125,11 +126,11 @@ public class Player extends Entity {
             setSpriteNum(1);
         }
 
-        if (keyListener.actionPressed) {
-            Item nextItem = gamePanel.collisionHandler.checkObjectCollision(this, true);
+        if (inGameKeyListener.actionPressed) {
+            Item nextItem = gamePanel.getCollisionHandler().checkObjectCollision(this, true);
             if (nextItem != null) {
                 nextItem.actionEvent(this, gamePanel);
-                gamePanel.keyListener.actionPressed = false;
+                gamePanel.getKeyListener().actionPressed = false;
             }
         }
     }
@@ -280,14 +281,14 @@ public class Player extends Entity {
 
     public void drawPlayer(Graphics2D g2, Sprite curSprite){
         g2.drawImage(curSprite.getSpriteImage(), screenX, screenY, curSprite.getWidth(), curSprite.getHeight(), null);
-        if(Game.DEBUG){
+        if(RogueALikeGame.DEBUG){
             g2.setColor(Color.RED);
             g2.drawRect(screenX + getSolidArea().x, screenY + getSolidArea().y, getSolidArea().width, getSolidArea().height);
         }
     }
 
-    public KeyHandler getKeyListener() {
-        return keyListener;
+    public InGameKeyListener getKeyListener() {
+        return inGameKeyListener;
     }
 
     public int getScreenX() {
@@ -298,11 +299,11 @@ public class Player extends Entity {
         return screenY;
     }
 
-    public GamePanel getGamePanel() {
+    public GameInterface getGamePanel() {
         return gamePanel;
     }
 
-    public void setGamePanel(GamePanel gamePanel) {
+    public void setGamePanel(InGameInterface gamePanel) {
         this.gamePanel = gamePanel;
     }
 

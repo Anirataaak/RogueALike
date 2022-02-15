@@ -1,4 +1,4 @@
-package de.regitstudios.rogueALike.constants;
+package de.regitstudios.rogueALike.objects.sprites;
 
 public interface SpriteTypes {
 

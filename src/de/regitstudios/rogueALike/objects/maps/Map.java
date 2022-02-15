@@ -5,17 +5,18 @@
  *
  *  All rights reserved
  */
-package de.regitstudios.rogueALike.objects;
+package de.regitstudios.rogueALike.objects.maps;
 
-import de.regitstudios.rogueALike.gui.GamePanel;
+import de.regitstudios.rogueALike.gui.interfaces.GameInterface;
 import de.regitstudios.rogueALike.objects.item.Item;
+import de.regitstudios.rogueALike.objects.tiles.Tile;
 
 import java.awt.*;
 import java.util.ArrayList;
 
 import static de.regitstudios.rogueALike.constants.GUIConstants.TILE_SIZE;
-import static de.regitstudios.rogueALike.handler.MapHandler.loadMap;
-import static de.regitstudios.rogueALike.handler.TileHandler.getTileByIndex;
+import static de.regitstudios.rogueALike.utils.MapUtil.getTileByIndex;
+import static de.regitstudios.rogueALike.utils.MapUtil.loadMap;
 
 /**
  * @author <a href="mailto:fabian.stetter@regitstudios.de">Fabian Stetter</a>
@@ -36,7 +37,7 @@ public class Map {
         setItems(items);
     }
 
-    public void draw(Graphics2D graphics, GamePanel gamePanel){
+    public void draw(Graphics2D graphics, GameInterface gamePanel){
 
         int mapCol = 0;
         int mapRow = 0;
@@ -48,14 +49,14 @@ public class Map {
 
             int worldX = mapCol * TILE_SIZE;
             int worldY = mapRow * TILE_SIZE;
-            int screenX = worldX - gamePanel.player.getWorldX() + gamePanel.player.getScreenX();
-            int screenY = worldY - gamePanel.player.getWorldY() + gamePanel.player.getScreenY();
+            int screenX = worldX - gamePanel.getCurrentPlayer().getWorldX() + gamePanel.getCurrentPlayer().getScreenX();
+            int screenY = worldY - gamePanel.getCurrentPlayer().getWorldY() + gamePanel.getCurrentPlayer().getScreenY();
 
             //Sorgt dafür, dass nur die Tiles in der direkt Umgebung des Spielers geladen werden
-            if(worldX + TILE_SIZE > gamePanel.player.getWorldX() - gamePanel.player.getScreenX() &&
-                    worldX - TILE_SIZE < gamePanel.player.getWorldX() + gamePanel.player.getScreenX() &&
-                    worldY + TILE_SIZE > gamePanel.player.getWorldY() - gamePanel.player.getScreenY() &&
-                    worldY - TILE_SIZE < gamePanel.player.getWorldY() + gamePanel.player.getScreenY()){
+            if(worldX + TILE_SIZE > gamePanel.getCurrentPlayer().getWorldX() - gamePanel.getCurrentPlayer().getScreenX() &&
+                    worldX - TILE_SIZE < gamePanel.getCurrentPlayer().getWorldX() + gamePanel.getCurrentPlayer().getScreenX() &&
+                    worldY + TILE_SIZE > gamePanel.getCurrentPlayer().getWorldY() - gamePanel.getCurrentPlayer().getScreenY() &&
+                    worldY - TILE_SIZE < gamePanel.getCurrentPlayer().getWorldY() + gamePanel.getCurrentPlayer().getScreenY()){
                 graphics.drawImage(curTile.getSprite().getSpriteImage(), screenX, screenY, curTile.getSprite().getWidth(), curTile.getSprite().getWidth(), null);
 
             }

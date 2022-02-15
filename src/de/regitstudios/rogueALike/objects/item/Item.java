@@ -7,9 +7,9 @@
  */
 package de.regitstudios.rogueALike.objects.item;
 
-import de.regitstudios.rogueALike.gui.GamePanel;
+import de.regitstudios.rogueALike.gui.interfaces.GameInterface;
+import de.regitstudios.rogueALike.objects.sprites.Sprite;
 import de.regitstudios.rogueALike.objects.entities.Player;
-import de.regitstudios.rogueALike.objects.Sprite;
 
 import java.awt.*;
 
@@ -36,23 +36,23 @@ public abstract class Item {
         setWorldY(worldY);
     }
 
-    public void draw(Graphics2D g2, GamePanel gamePanel) {
+    public void draw(Graphics2D g2, GameInterface gamePanel) {
 
-        int screenX = worldX - gamePanel.player.getWorldX() + gamePanel.player.getScreenX();
-        int screenY = worldY - gamePanel.player.getWorldY() + gamePanel.player.getScreenY();
+        int screenX = worldX - gamePanel.getCurrentPlayer().getWorldX() + gamePanel.getCurrentPlayer().getScreenX();
+        int screenY = worldY - gamePanel.getCurrentPlayer().getWorldY() + gamePanel.getCurrentPlayer().getScreenY();
 
-        if (worldX + TILE_SIZE > gamePanel.player.getWorldX() - gamePanel.player.getScreenX() &&
-            worldX - TILE_SIZE < gamePanel.player.getWorldX() + gamePanel.player.getScreenX() &&
-            worldY + TILE_SIZE > gamePanel.player.getWorldY() - gamePanel.player.getScreenY() &&
-            worldY - TILE_SIZE < gamePanel.player.getWorldY() + gamePanel.player.getScreenY()){
+        if (worldX + TILE_SIZE > gamePanel.getCurrentPlayer().getWorldX() - gamePanel.getCurrentPlayer().getScreenX() &&
+            worldX - TILE_SIZE < gamePanel.getCurrentPlayer().getWorldX() + gamePanel.getCurrentPlayer().getScreenX() &&
+            worldY + TILE_SIZE > gamePanel.getCurrentPlayer().getWorldY() - gamePanel.getCurrentPlayer().getScreenY() &&
+            worldY - TILE_SIZE < gamePanel.getCurrentPlayer().getWorldY() + gamePanel.getCurrentPlayer().getScreenY()){
 
             g2.drawImage(getSprite().getSpriteImage(), screenX, screenY, TILE_SIZE, TILE_SIZE, null);
         }
     }
 
-    public abstract void collisionEvent(Player player, GamePanel gamePanel);
+    public abstract void collisionEvent(Player player, GameInterface gamePanel);
 
-    public abstract void actionEvent(Player player, GamePanel gamePanel);
+    public abstract void actionEvent(Player player, GameInterface gamePanel);
 
     public Rectangle getSolidArea() {
         return solidArea;

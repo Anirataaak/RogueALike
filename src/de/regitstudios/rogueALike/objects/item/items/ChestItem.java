@@ -7,16 +7,16 @@
  */
 package de.regitstudios.rogueALike.objects.item.items;
 
-import de.regitstudios.rogueALike.gui.GamePanel;
+import de.regitstudios.rogueALike.gui.interfaces.GameInterface;
 import de.regitstudios.rogueALike.objects.entities.Player;
 import de.regitstudios.rogueALike.objects.item.Item;
 import de.regitstudios.rogueALike.objects.item.PickupItem;
 
-import static de.regitstudios.rogueALike.constants.Sounds.SOUND_CHEST_OPEN;
-import static de.regitstudios.rogueALike.constants.Sounds.SOUND_ERROR;
-import static de.regitstudios.rogueALike.constants.Sprites.SPRITE_ITEM_CHEST;
-import static de.regitstudios.rogueALike.constants.Sprites.SPRITE_ITEM_CHEST_OPEN;
-import static de.regitstudios.rogueALike.handler.SoundHandler.playSoundOnce;
+import static de.regitstudios.rogueALike.objects.sounds.Sounds.SOUND_CHEST_OPEN;
+import static de.regitstudios.rogueALike.objects.sounds.Sounds.SOUND_ERROR;
+import static de.regitstudios.rogueALike.objects.sprites.Sprites.SPRITE_ITEM_CHEST;
+import static de.regitstudios.rogueALike.objects.sprites.Sprites.SPRITE_ITEM_CHEST_OPEN;
+import static de.regitstudios.rogueALike.utils.SoundUtil.playSoundOnce;
 
 /**
  * @author <a href="mailto:fabian.stetter@regitstudios.de">Fabian Stetter</a>
@@ -34,11 +34,11 @@ public class ChestItem extends Item {
     }
 
     @Override
-    public void collisionEvent(Player player, GamePanel gamePanel) {
+    public void collisionEvent(Player player, GameInterface gamePanel) {
     }
 
     @Override
-    public void actionEvent(Player player, GamePanel gamePanel) {
+    public void actionEvent(Player player, GameInterface gamePanel) {
         if(player.getKeyCount() > 0 && !isOpen()) {
             setSprite(SPRITE_ITEM_CHEST_OPEN);
             player.setKeyCount(player.getKeyCount() - 1);

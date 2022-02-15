@@ -1,6 +1,5 @@
-package de.regitstudios.rogueALike.constants;
+package de.regitstudios.rogueALike.objects.maps;
 
-import de.regitstudios.rogueALike.objects.Map;
 import de.regitstudios.rogueALike.objects.item.Item;
 import de.regitstudios.rogueALike.objects.item.items.*;
 
@@ -10,7 +9,7 @@ import java.util.Arrays;
 public interface Maps {
 
     //Items for Maps
-    ArrayList<Item> ITEMS_START_MAP = new ArrayList<Item>(Arrays.asList(
+    ArrayList<Item> ITEMS_START_MAP = new ArrayList<>(Arrays.asList(
             new DoorItem(10, 11),
             new KeyItem(2, 3),
             new ChestItem(0, 0, new RedGemItem(), true),

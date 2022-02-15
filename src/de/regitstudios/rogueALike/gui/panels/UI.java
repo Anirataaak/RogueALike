@@ -5,25 +5,28 @@
  *
  *  All rights reserved
  */
-package de.regitstudios.rogueALike.gui;
+package de.regitstudios.rogueALike.gui.panels;
 
-import de.regitstudios.rogueALike.objects.Sprite;
+import de.regitstudios.rogueALike.gui.interfaces.GameInterface;
+import de.regitstudios.rogueALike.objects.sprites.Sprite;
 
 import java.awt.*;
 import java.io.File;
+import java.util.Objects;
 
-import static de.regitstudios.rogueALike.constants.Sprites.*;
-import static de.regitstudios.rogueALike.gui.Game.DEBUG;
+import static de.regitstudios.rogueALike.objects.sprites.Sprites.*;
+import static de.regitstudios.rogueALike.game.RogueALikeGame.DEBUG;
 import static java.awt.Color.WHITE;
+import static java.awt.Font.TRUETYPE_FONT;
 
 /**
  * @author <a href="mailto:fabian.stetter@regitstudios.de">Fabian Stetter</a>
  */
-public class UI {
+public class UI extends Panel {
 
-    private GamePanel gamePanel;
+    private GameInterface gamePanel;
 
-    public UI(GamePanel gamePanel){
+    public UI(GameInterface gamePanel){
         this.gamePanel = gamePanel;
     }
 
@@ -31,14 +34,14 @@ public class UI {
 
         Font zeldaFont = null;
         try {
-            zeldaFont = Font.createFont(Font.TRUETYPE_FONT, new File(UI.class.getResource("/Font/ReturnofGanon.ttf").toURI())).deriveFont(35f);
+            zeldaFont = Font.createFont(TRUETYPE_FONT, new File(Objects.requireNonNull(UI.class.getResource("/Font/ReturnofGanon.ttf")).toURI())).deriveFont(35f);
         } catch (Exception e) {
             e.printStackTrace();
         }
         g2.setFont(zeldaFont);
         g2.setColor(WHITE);
         g2.drawImage(SPRITE_HUD_GEM.getSpriteImage(), 100, 10, 32, 32, null);
-        int gemCount = gamePanel.player.getGemCount();
+        int gemCount = gamePanel.getCurrentPlayer().getGemCount();
         if(gemCount < 10){
             g2.drawString("00" + gemCount, 97, 70);
         } else if(gemCount < 100){
@@ -47,25 +50,25 @@ public class UI {
             g2.drawString(String.valueOf(gemCount), 97, 70);
         }
         g2.drawImage(SPRITE_HUD_BOMB.getSpriteImage(), 160, 10, 32, 32, null);
-        int bombCount = gamePanel.player.getBombCount();
+        int bombCount = gamePanel.getCurrentPlayer().getBombCount();
         if(bombCount < 10){
             g2.drawString("0" + bombCount, 165, 70);
         } else if(bombCount < 100){
             g2.drawString(String.valueOf(bombCount), 165, 70);
         }
         g2.drawImage(SPRITE_HUD_ARROW.getSpriteImage(), 220, 10, 48, 32, null);
-        int arrowCount = gamePanel.player.getArrowCount();
+        int arrowCount = gamePanel.getCurrentPlayer().getArrowCount();
         if(arrowCount < 10){
             g2.drawString("0" + arrowCount, 230, 70);
         } else if(arrowCount < 100){
             g2.drawString(String.valueOf(arrowCount), 230, 70);
         }
         g2.drawImage(SPRITE_HUD_KEY.getSpriteImage(), 280, 10, 32, 32, null);
-        g2.drawString(String.valueOf(gamePanel.player.getKeyCount()), 290, 70);
+        g2.drawString(String.valueOf(gamePanel.getCurrentPlayer().getKeyCount()), 290, 70);
         g2.drawImage(SPRITE_HUD_HEART_TITLE.getSpriteImage(), 500, 10, 120, 24, null);
-        int maxHealth = gamePanel.player.getMaxHealth();
+        int maxHealth = gamePanel.getCurrentPlayer().getMaxHealth();
         drawHealth(SPRITE_HUD_EMPTY_HEART, maxHealth, g2);
-        int actHealth = gamePanel.player.getActHealth();
+        int actHealth = gamePanel.getCurrentPlayer().getActHealth();
         if(actHealth % 2 == 0){
             drawHealth(SPRITE_HUD_FULL_HEART, actHealth, g2);
         } else {
@@ -101,7 +104,7 @@ public class UI {
     private void drawDebug(Graphics2D g2){
         Font zeldaFont = null;
         try {
-            zeldaFont = Font.createFont(Font.TRUETYPE_FONT, new File(UI.class.getResource("/Font/ReturnofGanon.ttf").toURI())).deriveFont(20f);
+            zeldaFont = Font.createFont(TRUETYPE_FONT, new File(Objects.requireNonNull(UI.class.getResource("/Font/ReturnofGanon.ttf")).toURI())).deriveFont(20f);
         } catch (Exception e) {
             e.printStackTrace();
         }

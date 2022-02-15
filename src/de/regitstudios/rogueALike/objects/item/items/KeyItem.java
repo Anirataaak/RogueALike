@@ -7,12 +7,12 @@
  */
 package de.regitstudios.rogueALike.objects.item.items;
 
-import de.regitstudios.rogueALike.gui.GamePanel;
+import de.regitstudios.rogueALike.gui.interfaces.GameInterface;
 import de.regitstudios.rogueALike.objects.entities.Player;
 import de.regitstudios.rogueALike.objects.item.PickupItem;
 
-import static de.regitstudios.rogueALike.constants.Sounds.SOUND_KEY_PICKUP;
-import static de.regitstudios.rogueALike.constants.Sprites.SPRITE_ITEM_KEY;
+import static de.regitstudios.rogueALike.objects.sounds.Sounds.SOUND_KEY_PICKUP;
+import static de.regitstudios.rogueALike.objects.sprites.Sprites.SPRITE_ITEM_KEY;
 
 /**
  * @author <a href="mailto:fabian.stetter@regitstudios.de">Fabian Stetter</a>
@@ -28,12 +28,12 @@ public class KeyItem extends PickupItem {
     }
 
     @Override
-    public void actionEvent(Player player, GamePanel gamePanel) {
+    public void actionEvent(Player player, GameInterface gamePanel) {
 
     }
 
     @Override
-    public void pickupEvent(Player player, GamePanel gamePanel) {
+    public void pickupEvent(Player player, GameInterface gamePanel) {
         if(player.getKeyCount() <= 9){
             player.setKeyCount(player.getKeyCount() + 1);
         }

@@ -5,23 +5,23 @@
  *
  *  All rights reserved
  */
-package de.regitstudios.rogueALike.handler;
+package de.regitstudios.rogueALike.utils;
 
 import de.regitstudios.rogueALike.constants.GUIConstants;
-import de.regitstudios.rogueALike.gui.GamePanel;
+import de.regitstudios.rogueALike.gui.interfaces.GameInterface;
 import de.regitstudios.rogueALike.objects.entities.Entity;
 import de.regitstudios.rogueALike.objects.item.Item;
 
-import java.util.ArrayList;
+import static de.regitstudios.rogueALike.utils.MapUtil.getTileByIndex;
 
 /**
  * @author <a href="mailto:fabian.stetter@regitstudios.de">Fabian Stetter</a>
  */
-public class CollisionHandler implements GUIConstants {
+public class CollisionUtil implements GUIConstants {
 
-    private final GamePanel gamePanel;
+    private final GameInterface gamePanel;
 
-    public CollisionHandler(GamePanel gamePanel) {
+    public CollisionUtil(GameInterface gamePanel) {
         this.gamePanel = gamePanel;
     }
 
@@ -43,7 +43,7 @@ public class CollisionHandler implements GUIConstants {
                 entityTopRow = (entityTopWorldY - entity.getSpeed()) / TILE_SIZE;
                 tileNum1 = gamePanel.getCurrentMap().getMapRowCol()[entityLeftCol][entityTopRow];
                 tileNum2 = gamePanel.getCurrentMap().getMapRowCol()[entityRightCol][entityTopRow];
-                if (TileHandler.getTileByIndex(tileNum1).isCollision() || TileHandler.getTileByIndex(tileNum2).isCollision()) {
+                if (getTileByIndex(tileNum1).isCollision() || getTileByIndex(tileNum2).isCollision()) {
                     entity.setCollisionOn(true);
                 }
             }
@@ -51,7 +51,7 @@ public class CollisionHandler implements GUIConstants {
                 entityBottomRow = (entityBottomWorldY + entity.getSpeed()) / TILE_SIZE;
                 tileNum1 = gamePanel.getCurrentMap().getMapRowCol()[entityLeftCol][entityBottomRow];
                 tileNum2 = gamePanel.getCurrentMap().getMapRowCol()[entityRightCol][entityBottomRow];
-                if (TileHandler.getTileByIndex(tileNum1).isCollision() || TileHandler.getTileByIndex(tileNum2).isCollision()) {
+                if (getTileByIndex(tileNum1).isCollision() || getTileByIndex(tileNum2).isCollision()) {
                     entity.setCollisionOn(true);
                 }
             }
@@ -59,7 +59,7 @@ public class CollisionHandler implements GUIConstants {
                 entityLeftCol = (entityLeftWorldX - entity.getSpeed()) / TILE_SIZE;
                 tileNum1 = gamePanel.getCurrentMap().getMapRowCol()[entityLeftCol][entityTopRow];
                 tileNum2 = gamePanel.getCurrentMap().getMapRowCol()[entityLeftCol][entityBottomRow];
-                if (TileHandler.getTileByIndex(tileNum1).isCollision() || TileHandler.getTileByIndex(tileNum2).isCollision()) {
+                if (getTileByIndex(tileNum1).isCollision() || getTileByIndex(tileNum2).isCollision()) {
                     entity.setCollisionOn(true);
                 }
             }
@@ -67,7 +67,7 @@ public class CollisionHandler implements GUIConstants {
                 entityRightCol = (entityRightWorldX + entity.getSpeed()) / TILE_SIZE;
                 tileNum1 = gamePanel.getCurrentMap().getMapRowCol()[entityRightCol][entityTopRow];
                 tileNum2 = gamePanel.getCurrentMap().getMapRowCol()[entityRightCol][entityBottomRow];
-                if (TileHandler.getTileByIndex(tileNum1).isCollision() || TileHandler.getTileByIndex(tileNum2).isCollision()) {
+                if (getTileByIndex(tileNum1).isCollision() || getTileByIndex(tileNum2).isCollision()) {
                     entity.setCollisionOn(true);
                 }
             }
@@ -77,7 +77,6 @@ public class CollisionHandler implements GUIConstants {
     public Item checkObjectCollision(Entity entity, boolean player) {
 
         Item returnItem = null;
-        ArrayList<Item> items = gamePanel.getCurrentMap().getItems();
 
         for (Item item : gamePanel.getCurrentMap().getItems()) {
 

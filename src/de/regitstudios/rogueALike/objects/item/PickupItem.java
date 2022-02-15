@@ -7,11 +7,11 @@
  */
 package de.regitstudios.rogueALike.objects.item;
 
-import de.regitstudios.rogueALike.gui.GamePanel;
-import de.regitstudios.rogueALike.handler.SoundHandler;
+import de.regitstudios.rogueALike.gui.interfaces.GameInterface;
+import de.regitstudios.rogueALike.utils.SoundUtil;
+import de.regitstudios.rogueALike.objects.sounds.Sound;
+import de.regitstudios.rogueALike.objects.sprites.Sprite;
 import de.regitstudios.rogueALike.objects.entities.Player;
-import de.regitstudios.rogueALike.objects.Sound;
-import de.regitstudios.rogueALike.objects.Sprite;
 
 /**
  * @author <a href="mailto:fabian.stetter@regitstudios.de">Fabian Stetter</a>
@@ -26,18 +26,18 @@ public abstract class PickupItem extends Item {
     }
 
     @Override
-    public void collisionEvent(Player player, GamePanel gamePanel) {
-        SoundHandler.playSoundOnce(pickupSound);
+    public void collisionEvent(Player player, GameInterface gamePanel) {
+        SoundUtil.playSoundOnce(pickupSound);
         gamePanel.getCurrentMap().getItems().remove(this);
         pickupEvent(player, gamePanel);
     }
 
     @Override
-    public void actionEvent(Player player, GamePanel gamePanel) {
+    public void actionEvent(Player player, GameInterface gamePanel) {
 
     }
 
-    public abstract void pickupEvent(Player player, GamePanel gamePanel);
+    public abstract void pickupEvent(Player player, GameInterface gamePanel);
 
     public Sound getPickupSound() {
         return pickupSound;

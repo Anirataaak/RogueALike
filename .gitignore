@@ -1,0 +1,222 @@
+/out/production/RogueALike/Object/arrow.png
+/out/production/RogueALike/HUD/arrow_icon.png
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/item/items/ArrowItem.class
+/out/production/RogueALike/Object/axe.png
+/out/production/RogueALike/Spritesheets/bg-overworld-light.png
+/out/production/RogueALike/Object/blue_gem.png
+/out/production/RogueALike/JAR/BlueBoyTreasure v1.0.jar
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/item/items/BlueGemItem.class
+/out/production/RogueALike/Object/bomb.png
+/out/production/RogueALike/HUD/bomb_icon.png
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/item/items/BombItem.class
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/item/items/BootItem.class
+/out/production/RogueALike/Object/boots.png
+/out/production/RogueALike/Player/Attacking sprites/boy_attack_down_1.png
+/out/production/RogueALike/Player/Attacking sprites/boy_attack_down_2.png
+/out/production/RogueALike/Player/Attacking sprites/boy_attack_left_1.png
+/out/production/RogueALike/Player/Attacking sprites/boy_attack_left_2.png
+/out/production/RogueALike/Player/Attacking sprites/boy_attack_right_1.png
+/out/production/RogueALike/Player/Attacking sprites/boy_attack_right_2.png
+/out/production/RogueALike/Player/Attacking sprites/boy_attack_up_1.png
+/out/production/RogueALike/Player/Attacking sprites/boy_attack_up_2.png
+/out/production/RogueALike/Player/Attacking sprites/boy_axe_down_1.png
+/out/production/RogueALike/Player/Attacking sprites/boy_axe_down_2.png
+/out/production/RogueALike/Player/Attacking sprites/boy_axe_left_1.png
+/out/production/RogueALike/Player/Attacking sprites/boy_axe_left_2.png
+/out/production/RogueALike/Player/Attacking sprites/boy_axe_right_1.png
+/out/production/RogueALike/Player/Attacking sprites/boy_axe_right_2.png
+/out/production/RogueALike/Player/Attacking sprites/boy_axe_up_1.png
+/out/production/RogueALike/Player/Attacking sprites/boy_axe_up_2.png
+/out/production/RogueALike/Player/Walking sprites/boy_down_1.png
+/out/production/RogueALike/Player/Walking sprites/boy_down_2.png
+/out/production/RogueALike/Player/Walking sprites/boy_down_3.png
+/out/production/RogueALike/Player/Walking sprites/boy_down_4.png
+/out/production/RogueALike/Player/Walking sprites/boy_down_5.png
+/out/production/RogueALike/Player/Walking sprites/boy_down_6.png
+/out/production/RogueALike/Player/Walking sprites/boy_down_7.png
+/out/production/RogueALike/Player/Walking sprites/boy_down_8.png
+/out/production/RogueALike/Player/Walking sprites/boy_down_9.png
+/out/production/RogueALike/Player/Walking sprites/boy_left_1.png
+/out/production/RogueALike/Player/Walking sprites/boy_left_2.png
+/out/production/RogueALike/Player/Walking sprites/boy_left_3.png
+/out/production/RogueALike/Player/Walking sprites/boy_left_4.png
+/out/production/RogueALike/Player/Walking sprites/boy_left_5.png
+/out/production/RogueALike/Player/Walking sprites/boy_left_6.png
+/out/production/RogueALike/Player/Walking sprites/boy_left_7.png
+/out/production/RogueALike/Player/Walking sprites/boy_left_8.png
+/out/production/RogueALike/Player/Walking sprites/boy_left_9.png
+/out/production/RogueALike/Player/Walking sprites/boy_right_1.png
+/out/production/RogueALike/Player/Walking sprites/boy_right_2.png
+/out/production/RogueALike/Player/Walking sprites/boy_right_3.png
+/out/production/RogueALike/Player/Walking sprites/boy_right_4.png
+/out/production/RogueALike/Player/Walking sprites/boy_right_5.png
+/out/production/RogueALike/Player/Walking sprites/boy_right_6.png
+/out/production/RogueALike/Player/Walking sprites/boy_right_7.png
+/out/production/RogueALike/Player/Walking sprites/boy_right_8.png
+/out/production/RogueALike/Player/Walking sprites/boy_right_9.png
+/out/production/RogueALike/Player/Walking sprites/boy_up_1.png
+/out/production/RogueALike/Player/Walking sprites/boy_up_2.png
+/out/production/RogueALike/Player/Walking sprites/boy_up_3.png
+/out/production/RogueALike/Player/Walking sprites/boy_up_4.png
+/out/production/RogueALike/Player/Walking sprites/boy_up_5.png
+/out/production/RogueALike/Player/Walking sprites/boy_up_6.png
+/out/production/RogueALike/Player/Walking sprites/boy_up_7.png
+/out/production/RogueALike/Player/Walking sprites/boy_up_8.png
+/out/production/RogueALike/Player/Walking sprites/boy_up_9.png
+/out/production/RogueALike/Spritesheets/characters.png
+/out/production/RogueALike/Object/chest.png
+/out/production/RogueALike/Object/chest_open.png
+/out/production/RogueALike/Sound/chest_open.wav
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/item/items/ChestItem.class
+/out/production/RogueALike/de/regitstudios/rogueALike/utils/CollisionUtil.class
+/out/production/RogueALike/Object/door.png
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/item/items/DoorItem.class
+/out/production/RogueALike/Tiles/New version/earth.png
+/out/production/RogueALike/HUD/empty_heart.png
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/entities/Entity.class
+/out/production/RogueALike/Sound/error.wav
+/out/production/RogueALike/HUD/full_heart.png
+/out/production/RogueALike/de/regitstudios/rogueALike/constants/GameConstants.class
+/out/production/RogueALike/de/regitstudios/rogueALike/gui/interfaces/GameInterface.class
+/out/production/RogueALike/de/regitstudios/rogueALike/gui/screens/GameScreen.class
+/out/production/RogueALike/de/regitstudios/rogueALike/constants/GameStates.class
+/out/production/RogueALike/Spritesheets/gdx-setup_latest.jar
+/out/production/RogueALike/HUD/gem_icon.png
+/out/production/RogueALike/Sound/gem_pickup.wav
+/out/production/RogueALike/Tiles/New version/grass00.png
+/out/production/RogueALike/Tiles/New version/grass01.png
+/out/production/RogueALike/Tiles/Old version/grass01.png
+/out/production/RogueALike/Tiles/Old version/grass02.png
+/out/production/RogueALike/Tiles/Old version/grass03.png
+/out/production/RogueALike/Object/green_gem.png
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/item/items/GreenGemItem.class
+/out/production/RogueALike/Monster/greenslime_down_1.png
+/out/production/RogueALike/Monster/greenslime_down_2.png
+/out/production/RogueALike/de/regitstudios/rogueALike/constants/GUIConstants.class
+/out/production/RogueALike/HUD/half_heart.png
+/out/production/RogueALike/HUD/health_title.png
+/out/production/RogueALike/Object/heart_blank.png
+/out/production/RogueALike/Object/heart_container.png
+/out/production/RogueALike/Object/heart_full.png
+/out/production/RogueALike/Object/heart_half.png
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/item/items/HeartContainerItem.class
+/out/production/RogueALike/de/regitstudios/rogueALike/gui/interfaces/InGameInterface.class
+/out/production/RogueALike/de/regitstudios/rogueALike/gui/listener/InGameKeyListener.class
+/out/production/RogueALike/de/regitstudios/rogueALike/gui/interfaces/Interface.class
+/out/production/RogueALike/HUD/inventory_curItem.png
+/out/production/RogueALike/HUD/inventory_items.png
+/out/production/RogueALike/de/regitstudios/rogueALike/gui/panels/InventoryPanel.class
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/item/Item.class
+/out/production/RogueALike/Spritesheets/items-objects.gif
+/out/production/RogueALike/Object/key.png
+/out/production/RogueALike/HUD/key_icon.png
+/out/production/RogueALike/Sound/key_pickup.wav
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/item/items/KeyItem.class
+/out/production/RogueALike/Spritesheets/link-2.gif
+/out/production/RogueALike/META-INF/MANIFEST.MF
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/maps/Map.class
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/maps/Maps.class
+/out/production/RogueALike/de/regitstudios/rogueALike/utils/MapUtil.class
+/out/production/RogueALike/Spritesheets/misc-2.png
+/out/production/RogueALike/NPC/oldman_down_1.png
+/out/production/RogueALike/NPC/oldman_down_2.png
+/out/production/RogueALike/NPC/oldman_left_1.png
+/out/production/RogueALike/NPC/oldman_left_2.png
+/out/production/RogueALike/NPC/oldman_right_1.png
+/out/production/RogueALike/NPC/oldman_right_2.png
+/out/production/RogueALike/NPC/oldman_up_1.png
+/out/production/RogueALike/NPC/oldman_up_2.png
+/out/production/RogueALike/Sound/overworld_soundtrack.wav
+/out/production/RogueALike/de/regitstudios/rogueALike/gui/panels/Panel.class
+/out/production/RogueALike/Tiles/Old version/pavern_01.png
+/out/production/RogueALike/Sound/pickup.wav
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/item/PickupItem.class
+/out/production/RogueALike/Object/plant.png
+/out/production/RogueALike/Object/plant_cut.png
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/item/items/PlantItem.class
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/entities/Player.class
+/out/production/RogueALike/Object/potion_red.png
+/out/production/RogueALike/Object/red_gem.png
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/item/items/RedGemItem.class
+/out/production/RogueALike/Font/ReturnofGanon.ttf
+/out/production/RogueALike/Tiles/New version/road00.png
+/out/production/RogueALike/Tiles/New version/road01.png
+/out/production/RogueALike/Tiles/New version/road02.png
+/out/production/RogueALike/Tiles/New version/road03.png
+/out/production/RogueALike/Tiles/New version/road04.png
+/out/production/RogueALike/Tiles/New version/road05.png
+/out/production/RogueALike/Tiles/New version/road06.png
+/out/production/RogueALike/Tiles/New version/road07.png
+/out/production/RogueALike/Tiles/New version/road08.png
+/out/production/RogueALike/Tiles/New version/road09.png
+/out/production/RogueALike/Tiles/New version/road10.png
+/out/production/RogueALike/Tiles/New version/road11.png
+/out/production/RogueALike/Tiles/New version/road12.png
+/out/artifacts/RogueALike_jar/RogueALike.jar
+/out/production/RogueALike/de/regitstudios/rogueALike/game/RogueALikeGame.class
+/out/production/RogueALike/Object/shield_blue.png
+/out/production/RogueALike/Object/shield_wood.png
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/sounds/Sound.class
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/sounds/Sounds.class
+/out/production/RogueALike/de/regitstudios/rogueALike/utils/SoundUtil.class
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/sprites/Sprite.class
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/sprites/Sprites.class
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/sprites/SpriteTypes.class
+/out/production/RogueALike/de/regitstudios/rogueALike/utils/SpriteUtil.class
+/out/production/RogueALike/Spritesheets/status-screen-germany.png
+/out/production/RogueALike/Object/sword_normal.png
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/tiles/Tile.class
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/tiles/Tiles.class
+/out/production/RogueALike/Spritesheets/tiles-houses-int.png
+/out/production/RogueALike/Tiles/New version/tree.png
+/out/production/RogueALike/de/regitstudios/rogueALike/gui/panels/UI.class
+/out/production/RogueALike/de/regitstudios/rogueALike/objects/entities/Villager.class
+/out/production/RogueALike/Villager/walking/villager_down1.png
+/out/production/RogueALike/Villager/walking/villager_down2.png
+/out/production/RogueALike/Villager/walking/villager_left1.png
+/out/production/RogueALike/Villager/walking/villager_left2.png
+/out/production/RogueALike/Villager/walking/villager_right1.png
+/out/production/RogueALike/Villager/walking/villager_right2.png
+/out/production/RogueALike/Villager/walking/villager_up1.png
+/out/production/RogueALike/Villager/walking/villager_up2.png
+/out/production/RogueALike/Tiles/New version/wall.png
+/out/production/RogueALike/Tiles/Old version/wall_01_bottom.png
+/out/production/RogueALike/Tiles/Old version/wall_01_left.png
+/out/production/RogueALike/Tiles/Old version/wall_01_right.png
+/out/production/RogueALike/Tiles/Old version/wall_01_top.png
+/out/production/RogueALike/Tiles/Old version/wall_corner_01_bottomLeft.png
+/out/production/RogueALike/Tiles/Old version/wall_corner_01_bottomRight.png
+/out/production/RogueALike/Tiles/Old version/wall_corner_01_topLeft.png
+/out/production/RogueALike/Tiles/Old version/wall_corner_01_topRight.png
+/out/production/RogueALike/Tiles/Old version/wall_post_01.png
+/out/production/RogueALike/Tiles/Old version/wall_post_02.png
+/out/production/RogueALike/Tiles/Old version/wall_post_03.png
+/out/production/RogueALike/Tiles/Old version/wall_post_04.png
+/out/production/RogueALike/Tiles/New version/water00.png
+/out/production/RogueALike/Tiles/New version/water01.png
+/out/production/RogueALike/Tiles/New version/water02.png
+/out/production/RogueALike/Tiles/New version/water03.png
+/out/production/RogueALike/Tiles/New version/water04.png
+/out/production/RogueALike/Tiles/New version/water05.png
+/out/production/RogueALike/Tiles/New version/water06.png
+/out/production/RogueALike/Tiles/New version/water07.png
+/out/production/RogueALike/Tiles/New version/water08.png
+/out/production/RogueALike/Tiles/New version/water09.png
+/out/production/RogueALike/Tiles/New version/water10.png
+/out/production/RogueALike/Tiles/New version/water11.png
+/out/production/RogueALike/Tiles/New version/water12.png
+/out/production/RogueALike/Tiles/New version/water13.png
+/out/production/RogueALike/Tiles/Old version/window_01_bottom.png
+/out/production/RogueALike/Tiles/Old version/window_01_left.png
+/out/production/RogueALike/Tiles/Old version/window_01_right.png
+/out/production/RogueALike/Tiles/Old version/window_01_top.png
+/out/production/RogueALike/Tiles/Old version/window_02_bottom.png
+/out/production/RogueALike/Tiles/Old version/window_02_left.png
+/out/production/RogueALike/Tiles/Old version/window_02_right.png
+/out/production/RogueALike/Tiles/Old version/window_02_top.png
+/out/production/RogueALike/Map/world01.txt
+/out/production/RogueALike/Map/world02.txt
+/out/production/RogueALike/Map/worldTest.txt
+/out/production/RogueALike/Map/worldV2.txt
+/out/production/RogueALike/Font/Zelda.ttf
+

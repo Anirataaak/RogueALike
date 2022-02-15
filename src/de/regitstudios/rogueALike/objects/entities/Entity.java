@@ -8,9 +8,9 @@
 package de.regitstudios.rogueALike.objects.entities;
 
 import de.regitstudios.rogueALike.constants.GUIConstants;
-import de.regitstudios.rogueALike.constants.Sprites;
-import de.regitstudios.rogueALike.gui.GamePanel;
-import de.regitstudios.rogueALike.objects.Sprite;
+import de.regitstudios.rogueALike.objects.sprites.Sprites;
+import de.regitstudios.rogueALike.gui.interfaces.GameInterface;
+import de.regitstudios.rogueALike.objects.sprites.Sprite;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -26,7 +26,7 @@ public abstract class Entity implements GUIConstants, Sprites {
     private int worldX, worldY;
     private int speed;
 
-    private GamePanel gamePanel;
+    private GameInterface gamePanel;
 
     private List<Sprite> upAnimation = new ArrayList<>();
     private List<Sprite> downAnimation = new ArrayList<>();
@@ -59,11 +59,11 @@ public abstract class Entity implements GUIConstants, Sprites {
 
     public abstract void draw(Graphics2D g2);
 
-    public GamePanel getGamePanel() {
+    public GameInterface getGamePanel() {
         return gamePanel;
     }
 
-    public void setGamePanel(GamePanel gamePanel) {
+    public void setGamePanel(GameInterface gamePanel) {
         this.gamePanel = gamePanel;
     }
 
@@ -83,7 +83,7 @@ public abstract class Entity implements GUIConstants, Sprites {
         this.screenY = screenY;
     }
 
-    public Entity(GamePanel gamePanel) {
+    public Entity(GameInterface gamePanel) {
         this.gamePanel = gamePanel;
     }
 

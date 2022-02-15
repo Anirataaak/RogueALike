@@ -5,11 +5,9 @@
  *
  *  All rights reserved
  */
-package de.regitstudios.rogueALike.constants;
+package de.regitstudios.rogueALike.objects.sprites;
 
-import de.regitstudios.rogueALike.objects.Sprite;
-
-import static de.regitstudios.rogueALike.constants.SpriteTypes.*;
+import static de.regitstudios.rogueALike.objects.sprites.SpriteTypes.*;
 
 /**
  * @author <a href="mailto:fabian.stetter@regitstudios.de">Fabian Stetter</a>

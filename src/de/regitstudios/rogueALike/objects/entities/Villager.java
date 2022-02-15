@@ -7,8 +7,8 @@
  */
 package de.regitstudios.rogueALike.objects.entities;
 
-import de.regitstudios.rogueALike.gui.GamePanel;
-import de.regitstudios.rogueALike.objects.Sprite;
+import de.regitstudios.rogueALike.gui.interfaces.InGameInterface;
+import de.regitstudios.rogueALike.objects.sprites.Sprite;
 
 import java.awt.*;
 
@@ -17,12 +17,13 @@ import java.awt.*;
  */
 public class Villager extends Entity {
 
-    public Villager(GamePanel gamePanel) {
+    public Villager(InGameInterface gamePanel) {
         super(gamePanel);
 
         setDirection(DIR_DOWN);
         setSpeed(1);
         setEntityImage();
+        setDefaultValues();
     }
 
     public void setDefaultValues() {
@@ -45,25 +46,14 @@ public class Villager extends Entity {
     @Override
     public void draw(Graphics2D g2) {
         Sprite curSprite = null;
-        int screenX = getWorldX() - getGamePanel().player.getWorldX() + getGamePanel().player.getScreenX() + getWorldX();
-        int screenY = getWorldY() - getGamePanel().player.getWorldY() + getGamePanel().player.getScreenY() + getWorldY();
 
-        if (getWorldX() + TILE_SIZE > getGamePanel().player.getWorldX() - getGamePanel().player.getScreenX() &&
-                getWorldX() - TILE_SIZE < getGamePanel().player.getWorldX() + getGamePanel().player.getScreenX() &&
-                getWorldY() + TILE_SIZE > getGamePanel().player.getWorldY() - getGamePanel().player.getScreenY() &&
-                getWorldY() - TILE_SIZE < getGamePanel().player.getWorldY() + getGamePanel().player.getScreenY());
+        int screenX = getWorldX() - getGamePanel().getCurrentPlayer().getWorldX() + getGamePanel().getCurrentPlayer().getScreenX();
+        int screenY = getWorldY() - getGamePanel().getCurrentPlayer().getWorldY() + getGamePanel().getCurrentPlayer().getScreenY();
 
-            switch(getDirection()){
-                case DIR_UP -> {
-                    if(getSpriteNum() == 1){
-                        curSprite = getDown(0);
-                    }
-                    if(getSpriteNum() == 2){
-                        curSprite = getDown(1);
-
-                }
-            }
-        }
+        if (getWorldX() + TILE_SIZE > getGamePanel().getCurrentPlayer().getWorldX() - getGamePanel().getCurrentPlayer().getScreenX() &&
+                getWorldX() - TILE_SIZE < getGamePanel().getCurrentPlayer().getWorldX() + getGamePanel().getCurrentPlayer().getScreenX() &&
+                getWorldY() + TILE_SIZE > getGamePanel().getCurrentPlayer().getWorldY() - getGamePanel().getCurrentPlayer().getScreenY() &&
+                getWorldY() - TILE_SIZE < getGamePanel().getCurrentPlayer().getWorldY() + getGamePanel().getCurrentPlayer().getScreenY());
         g2.drawImage(this.getDown(0).getSpriteImage(), screenX, screenY, this.getDown(0).getWidth(), this.getDown(0).getHeight(), null);
     }
 }

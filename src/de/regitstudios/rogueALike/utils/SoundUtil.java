@@ -5,16 +5,16 @@
  *
  *  All rights reserved
  */
-package de.regitstudios.rogueALike.handler;
+package de.regitstudios.rogueALike.utils;
 
-import de.regitstudios.rogueALike.objects.Sound;
+import de.regitstudios.rogueALike.objects.sounds.Sound;
 
 import javax.sound.sampled.*;
 
 /**
  * @author <a href="mailto:fabian.stetter@regitstudios.de">Fabian Stetter</a>
  */
-public class SoundHandler {
+public class SoundUtil {
 
     public static void playSoundInLoop(Sound sound) {
         Clip soundClip = createClip(sound);

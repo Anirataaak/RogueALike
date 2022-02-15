@@ -1,6 +1,4 @@
-package de.regitstudios.rogueALike.constants;
-
-import de.regitstudios.rogueALike.objects.Sound;
+package de.regitstudios.rogueALike.objects.sounds;
 
 public interface Sounds {
 

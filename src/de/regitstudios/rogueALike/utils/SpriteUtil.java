@@ -5,9 +5,9 @@
  *
  *  All rights reserved
  */
-package de.regitstudios.rogueALike.handler;
+package de.regitstudios.rogueALike.utils;
 
-import de.regitstudios.rogueALike.constants.Sprites;
+import de.regitstudios.rogueALike.objects.sprites.Sprites;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -17,7 +17,7 @@ import java.util.Objects;
 /**
  * @author <a href="mailto:fabian.stetter@regitstudios.de">Fabian Stetter</a>
  */
-public class SpriteHandler {
+public class SpriteUtil {
 
     public static BufferedImage returnImage(String spriteType, String spriteName) {
         try {

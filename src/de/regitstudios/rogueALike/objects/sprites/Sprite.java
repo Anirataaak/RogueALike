@@ -5,11 +5,11 @@
  *
  *  All rights reserved
  */
-package de.regitstudios.rogueALike.objects;
+package de.regitstudios.rogueALike.objects.sprites;
 
 import java.awt.image.BufferedImage;
 
-import static de.regitstudios.rogueALike.handler.SpriteHandler.returnImage;
+import static de.regitstudios.rogueALike.utils.SpriteUtil.returnImage;
 
 /**
  * @author <a href="mailto:fabian.stetter@regitstudios.de">Fabian Stetter</a>

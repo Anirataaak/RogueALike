@@ -34,11 +34,4 @@ public interface GUIConstants {
     String DIR_DOWN = "DOWN";
     String DIR_LEFT = "LEFT";
     String DIR_RIGHT = "RIGHT";
-    
-    String TEST = "TEST";
-    String TEST1 = "TEST1";
-    String TEST2 = "TEST2";
-    String TEST3 = "TEST3";
-    String TEST5 = "TEST5";
-    String TEST4 = "TEST4";
 }
