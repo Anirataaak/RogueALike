@@ -40,4 +40,5 @@ public interface GUIConstants {
     String TEST2 = "TEST2";
     String TEST3 = "TEST3";
     String TEST5 = "TEST5";
+    String TEST4 = "TEST4";
 }
